@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyobot Blockly ESP32</title>
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cyobot Blockly ESP32 Online</h1>
+    <div id="blocklyDiv" style="height: 480px; width: 100%;"></div>
+    <xml id="toolbox" style="display: none">
+        <category name="Керування" colour="210">
+            <block type="cyobot_button"></block>
+            <block type="cyobot_potentiometer"></block>
+            <block type="cyobot_led"></block>
+            <block type="cyobot_motor"></block>
+            <block type="cyobot_rgb_matrix"></block>
+        </category>
+        <category name="Логіка" colour="120">
+            <block type="controls_if"></block>
+            <block type="logic_compare"></block>
+        </category>
+    </xml>
+    <button id="connectBtn">Підключити</button>
+    <button id="sendCodeBtn">Відправити код на ESP32</button>
+    <pre id="output"></pre>
+    <script src="websocket.js"></script>
+    <script src="blocks/cyobot_blocks.js"></script>
+    <script src="generators/cpp_generator.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
